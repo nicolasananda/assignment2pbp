@@ -1,62 +1,30 @@
-# Template Proyek Django PBP
+# WEEKLY ASSIGNMENT 2
 
-Pemrograman Berbasis Platform (CSGE602022) - diselenggarakan oleh Fakultas Ilmu Komputer Universitas Indonesia, Semester Ganjil 2022/2023
+Nicolas Ananda - 2106720973
 
-*Read this in other languages: [Indonesian](README.md), [English](README.en.md)*
+link
 
-## Pendahuluan
+## Client's request and response to the Django Web Application.
 
-Repositori ini merupakan sebuah template yang dirancang untuk membantu mahasiswa yang sedang mengambil mata kuliah Pemrograman Berbasis Platform (CSGE602022) mengetahui struktur sebuah proyek aplikasi Django serta file dan konfigurasi yang penting dalam berjalannya aplikasi. Kamu dapat dengan bebas menyalin isi dari repositori ini atau memanfaatkan repositori ini sebagai pembelajaran sekaligus awalan dalam membuat sebuah proyek Django.
+Client ------>  urls.py --------> views.py -------------> models.py --------------> Database ---------- template --> client
+     (request)          (routing)         (Fetching Data)          (Fetching Data)           (outputs)
 
-## Cara Menggunakan
+In conclusion, the client will submit requests to this application that are directed to a URL. When a request is made, Django checks to see if a corresponding response already exists before sending it to Views. The client will see a Template (which provides the output of the webpage) after Views have finished retrieving data from Models.py.
 
-Apabila kamu ingin menggunakan repositori ini sebagai repositori awalan yang nantinya akan kamu modifikasi:
+## Why do we use virtual environments?
 
-1. Buka laman GitHub repositori templat kode, lalu klik tombol "**Use this template**"
-   untuk membuat salinan repositori ke dalam akun GitHub milikmu.
-2. Buka laman GitHub repositori yang dibuat dari templat, lalu gunakan perintah
-   `git clone` untuk menyalin repositorinya ke suatu lokasi di dalam sistem
-   berkas (_filesystem_) komputermu:
+For various applications, Python provides a wide range of modules and packages. We might need to install a third-party library for our project. The same directory is used for retrieval and storage by a different project that doesn't require any external packages. Because of this, each project can store and retrieve packages from its own isolated environment that was created for it using the virtual environment.
 
-   ```shell
-   git clone <URL ke repositori di GitHub> <path ke suatu lokasi di filesystem>
-   ```
-3. Masuk ke dalam repositori yang sudah di-_clone_ dan jalankan perintah berikut
-   untuk menyalakan _virtual environment_:
+## Can we create a django web application without virtual environments?
+Without virtual enviroment, it is definitely still possbile for a web application to be developed but it isn't efficient and messy, because when u install them at the default enviroment it could cause errors.
 
-   ```shell
-   python -m venv env
-   ```
-4. Nyalakan environment dengan perintah berikut:
+## Implementing Steps 1-4
+## Step 1
+First, i open views.py and write a fuction called show_catalog that will return the render function that will show the "Katalog.html" that contains the data on the variable "context"
+## Step 2
+This step will be used for routing the views function that will enable the HTML page to be displayed on the browser. Then, we add the variable "urlpatterns" from Lab 1 to the show_catalog function. Also we would need to register katalog in urls.py that is located on the project_django folder
+## Step 3
+At this step, display the list of items in a table then make a loop of list_item to access the data stored in models.py
+## Step 4
+After finishin all the steps we would need to upload all of it github by using the commands git add, git commit, and git push. After uploading, deploy it in heroku using the method in Lab 0
 
-   ```shell
-   # Windows
-   .\env\Scripts\activate
-   # Linux/Unix, e.g. Ubuntu, MacOS
-   source env/bin/activate
-   ```
-5. Install dependencies yang dibutuhkan untuk menjalankan aplikasi dengan perintah berikut:
-
-   ```shell
-   pip install -r requirements.txt
-   ```
-
-6. Jalankan aplikasi Django menggunakan server pengembangan yang berjalan secara
-   lokal:
-
-   ```shell
-   python manage.py runserver
-   ```
-7. Bukalah `http://localhost:8000` pada browser favoritmu untuk melihat apakah aplikasi sudah berjalan dengan benar.
-
-## Contoh Deployment 
-
-Pada template ini, deployment dilakukan dengan memanfaatkan GitHub Actions sebagai _runner_ dan Heroku sebagai platform Hosting aplikasi. 
-
-Untuk melakukan deployment, kamu dapat melihat instruksi yang ada pada [Tutorial 0](https://pbp-fasilkom-ui.github.io/ganjil-2023/assignments/tutorial/tutorial-0).
-
-Untuk contoh aplikasi Django yang sudah di deploy, dapat kamu akses di [https://django-pbp-template.herokuapp.com/](https://django-pbp-template.herokuapp.com/)
-
-## Credits
-
-Template ini dibuat berdasarkan [PBP Ganjil 2021](https://gitlab.com/PBP-2021/pbp-lab) yang ditulis oleh Tim Pengajar Pemrograman Berbasis Platform 2021 ([@prakashdivyy](https://gitlab.com/prakashdivyy)) dan [django-template-heroku](https://github.com/laymonage/django-template-heroku) yang ditulis oleh [@laymonage, et al.](https://github.com/laymonage). Template ini dirancang sedemikian rupa sehingga mahasiswa dapat menjadikan template ini sebagai awalan serta acuan dalam mengerjakan tugas maupun dalam berkarya.
