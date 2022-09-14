@@ -6,7 +6,7 @@ link
 
 ## Client's request and response to the Django Web Application.
 
-#Client ------> urls.py --------> views.py -----------> models.py ----------> Database -------> Template ------> Client
+Client ------> urls.py --------> views.py -----------> models.py ----------> Database -------> Template ------> Client
 
 
 In conclusion, the client will submit requests to this application that are directed to a URL. When a request is made, Django checks to see if a corresponding response already exists before sending it to Views. The client will see a Template (which provides the output of the webpage) after Views have finished retrieving data from Models.py.
