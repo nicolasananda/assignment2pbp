@@ -2,7 +2,7 @@
 
 Nicolas Ananda - 2106720973
 
-link
+[Heroku Link](https://weeklyassignment2.herokuapp.com/katalog/)
 
 ## Client's request and response to the Django Web Application.
 
