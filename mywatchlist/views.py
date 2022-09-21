@@ -4,7 +4,7 @@ from django.core import serializers
 from mywatchlist.models import MyWatchList
 
 # Create your views here.
-def showmywatchlist(request):
+def show_mywatchlist(request):
     data_mywatchlist_item = MyWatchList.objects.all()
     udahnonton = 0
     belumnonton = 0
