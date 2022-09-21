@@ -30,3 +30,13 @@ After finishin all the steps we would need to upload all of it github by using t
 
 
 # WEEKLY ASSIGNMENT 3
+
+Nicolas Ananda - 2106720973
+
+[Heroku Link My Watch List](https://weeklyassignment2.herokuapp.com/mywatchlist/)
+
+## Explain the difference between JSON, XML, and HTML!
+
+The main difference between HTML, XML, and JSON can mainly be seen from 3 things, the structure, the content and the formatting. For JSON(JavaScript Object Notation) it is based from the JavaScript language, its 
+
+
