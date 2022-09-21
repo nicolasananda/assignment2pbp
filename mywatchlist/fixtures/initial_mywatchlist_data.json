@@ -1,111 +1,111 @@
 [
     {
-        "model": "mywatchlist.mywatchlistitem",
+        "model": "mywatchlist.MyWatchList",
         "pk": 1,
         "fields": {
             "watched": true,
             "title": "PENGABDI SETAN 2: COMMUNION",
             "rating": 5,
-            "release_date": "2022 08 12",
+            "release_date": "2022-08-12",
             "review": "Terrifying!!!"
         }
     },
     {
-        "model": "mywatchlist.mywatchlistitem",
+        "model": "mywatchlist.MyWatchList",
         "pk": 2,
         "fields": {
             "watched": true,
             "title": "Doctor Strange in the Multiverse of Madness",
             "rating": 3.5,
-            "release_date": "2022 05 06",
+            "release_date": "2022-05-06",
             "review": "A really exciting movie"
         }
     },
     {
-        "model": "mywatchlist.mywatchlistitem",
+        "model": "mywatchlist.MyWatchList",
         "pk": 3,
         "fields": {
             "watched": true,
             "title": "Parasite",
             "rating": 5,
-            "release_date": "2019 06 21",
+            "release_date": "2019-06-21",
             "review": "Mindblowing"
         }
     },
     {
-        "model": "mywatchlist.mywatchlistitem",
+        "model": "mywatchlist.MyWatchList",
         "pk": 4,
         "fields": {
             "watched": true,
             "title": "Star Wars: The Last Jedi (Episode VIII)",
             "rating": 3.5,
-            "release_date": "2017 12 14",
+            "release_date": "2017-12-14",
             "review": "Outstanding!"
         }
     },
     {
-        "model": "mywatchlist.mywatchlistitem",
+        "model": "mywatchlist.MyWatchList",
         "pk": 5,
         "fields": {
             "watched": true,
             "title": "Avengers: Endgame",
             "rating": 4.5,
-            "release_date": "2019 04 24",
+            "release_date": "2019-04-24",
             "review": "Simply Amazing!!"
         }
     },
     {
-        "model": "mywatchlist.mywatchlistitem",
+        "model": "mywatchlist.MyWatchList",
         "pk": 6,
         "fields": {
             "watched": true,
             "title": "The Platform",
             "rating": 3,
-            "release_date": "2019 11 08",
+            "release_date": "2019-11-08",
             "review": "Not as good as my expectation"
         }
     },
     {
-        "model": "mywatchlist.mywatchlistitem",
+        "model": "mywatchlist.MyWatchList",
         "pk": 7,
         "fields": {
             "watched": true,
             "title": "American Psycho",
             "rating": 4,
-            "release_date": "2000 04 14",
+            "release_date": "2000-04-14",
             "review": "Creepy"
         }
     },
     {
-        "model": "mywatchlist.mywatchlistitem",
+        "model": "mywatchlist.MyWatchList",
         "pk": 8,
         "fields": {
             "watched": true,
             "title": "Whiplash",
             "rating": 9,
-            "release_date": "2014 10 10 ",
+            "release_date": "2014-10-10",
             "review": "Inspiring"
         }
     },
     {
-        "model": "mywatchlist.mywatchlistitem",
+        "model": "mywatchlist.MyWatchList",
         "pk": 9,
         "fields": {
             "watched": false,
             "title": "Top Gun: Maverick",
             "rating": 4.5,
-            "release_date": "2022 05 27",
+            "release_date": "2022-05-27",
             "review": "-"
         }
     },
     {
-        "model": "mywatchlist.mywatchlistitem",
+        "model": "mywatchlist.MyWatchList",
         "pk": 10,
         "fields": {
             "watched": true,
             "title": "Edge of Tomorrow",
             "rating": 4,
-            "release_date": "2014 05 28",
+            "release_date": "2014-05-28",
             "review": "Amazing Movie"
         }
     }
