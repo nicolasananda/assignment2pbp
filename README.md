@@ -2,7 +2,7 @@
 
 Nicolas Ananda - 2106720973
 
-[Heroku Link](https://weeklyassignment2.herokuapp.com/katalog/)
+[Heroku Link Katalog](https://weeklyassignment2.herokuapp.com/katalog/)
 
 ## Client's request and response to the Django Web Application.
 
@@ -28,3 +28,5 @@ At this step, display the list of items in a table then make a loop of list_item
 ## Step 4
 After finishin all the steps we would need to upload all of it github by using the commands git add, git commit, and git push. After uploading, deploy it in heroku using the method in Lab 0
 
+
+# WEEKLY ASSIGNMENT 3
