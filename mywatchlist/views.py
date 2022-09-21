@@ -11,7 +11,7 @@ def show_mywatchlist(request):
 
     for i in data_mywatchlist_item:
         if i.watched == True:
-            udah += 1
+            udahnonton += 1
         elif i.watched == False:
             belumnonton += 1
             
