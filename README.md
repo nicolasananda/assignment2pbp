@@ -41,7 +41,7 @@ The main difference between HTML, XML, and JSON can mainly be seen from 3 things
 
 For JSON (JavaScript Object Notation) it is based from the JavaScript language and it utilizes similar code used for JavaScript Object, therefore making it easier to convert it to objects. Although JSON is based from JavaScript but it's format is text only making JSON to be able to be coded in any language.
 
-HTML (HyperText Markup Language) is a language built for websites. It's content are structured making it being displayed neatly. It is usually written with tags that are able to present the amount of information displayed. ![messageImage_1663776844847](https://user-images.githubusercontent.com/112491776/191635510-78a67d64-a6a4-4abc-aaa2-1e87bbc8a6ef.jpg)
+HTML (HyperText Markup Language) is a language built for websites. It's content are structured making it being displayed neatly. It is usually written with tags that are able to present the amount of information displayed.
 
 
 XML (eXtensible Markup Language), it is quite similar with HTML which uses tags to display information but the diffrence is XML is designed to transport data where as HTML is used to display it
