@@ -41,7 +41,8 @@ The main difference between HTML, XML, and JSON can mainly be seen from 3 things
 
 For JSON (JavaScript Object Notation) it is based from the JavaScript language and it utilizes similar code used for JavaScript Object, therefore making it easier to convert it to objects. Although JSON is based from JavaScript but it's format is text only making JSON to be able to be coded in any language.
 
-HTML (HyperText Markup Language) is a language built for websites. It's content are structured making it being displayed neatly. It is usually written with tags that are able to present the amount of information displayed. 
+HTML (HyperText Markup Language) is a language built for websites. It's content are structured making it being displayed neatly. It is usually written with tags that are able to present the amount of information displayed. ![messageImage_1663776844847](https://user-images.githubusercontent.com/112491776/191635510-78a67d64-a6a4-4abc-aaa2-1e87bbc8a6ef.jpg)
+
 
 XML (eXtensible Markup Language), it is quite similar with HTML which uses tags to display information but the diffrence is XML is designed to transport data where as HTML is used to display it
 
@@ -54,6 +55,9 @@ Data delivery is necessary because how a client and server communicate with one 
 First, I created a new app called `mywatchlist` , then I added the URL path of `mywatchlist` in the `project_django/settings.py` and add `path('mywatchlist/', include('mywatchlist.urls')` in `project_django/urls.py` , then I created the models in `mywatchlist/models.py` after that I created 10 data entries in `mywatchlist/fixtures/initial_mywatchlist_data.json`, then I implement some codes in `mywatchlist/views.py` to show the data. Lastly, I pull,add , commit and push it to GitHub
 
 ## Postman API
+![messageImage_1663776874635](https://user-images.githubusercontent.com/112491776/191635422-75f7d00e-3878-4fdf-90d4-fb49ee46aa39.jpg)
 
+![messageImage_1663776844847](https://user-images.githubusercontent.com/112491776/191635536-9986508a-2a05-4114-b5fc-468b8796586a.jpg)
 
+![messageImage_1663776827274](https://user-images.githubusercontent.com/112491776/191635544-74b70041-1a93-45d4-a3bf-b06a05066705.jpg)
 
