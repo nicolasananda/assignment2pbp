@@ -76,20 +76,10 @@
             "review": "Creepy"
         }
     },
+    
     {
         "model": "mywatchlist.MyWatchList",
         "pk": 8,
-        "fields": {
-            "watched": true,
-            "title": "Whiplash",
-            "rating": 4.5,
-            "release_date": "2014-10-10",
-            "review": "Inspiring"
-        }
-    },
-    {
-        "model": "mywatchlist.MyWatchList",
-        "pk": 9,
         "fields": {
             "watched": false,
             "title": "Top Gun: Maverick",
@@ -98,15 +88,28 @@
             "review": "-"
         }
     },
+    
     {
         "model": "mywatchlist.MyWatchList",
-        "pk": 10,
+        "pk": 9,
         "fields": {
             "watched": true,
             "title": "Edge of Tomorrow",
             "rating": 4,
             "release_date": "2014-05-28",
             "review": "Amazing Movie"
+        }
+    },
+    
+    {
+        "model": "mywatchlist.MyWatchList",
+        "pk": 10,
+        "fields": {
+            "watched": true,
+            "title": "Whiplash",
+            "rating": 4.5,
+            "release_date": "2014-10-10",
+            "review": "Inspiring"
         }
     }
 ]
