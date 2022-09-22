@@ -17,10 +17,10 @@ def show_mywatchlist(request):
             
     context ={
         'list_item' : data_mywatchlist_item,
-        'Name': 'Nicolas Ananda',
+        'name': 'Nicolas Ananda',
         'NPM' : '2106720973',
-        'Watched' : udahnonton,
-        'Not Watched' : belumnonton,
+        'udahnonton' : udahnonton,
+        'belumnonton' : belumnonton,
     }
     
     return render(request,"mywatchlist.html", context)
