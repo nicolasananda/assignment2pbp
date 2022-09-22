@@ -26,7 +26,7 @@ This step will be used for routing the views function that will enable the HTML 
 ## Step 3
 At this step, display the list of items in a table then make a loop of list_item to access the data stored in models.py
 ## Step 4
-After finishin all the steps we would need to upload all of it github by using the commands git add, git commit, and git push. After uploading, deploy it in heroku using the method in Lab 0
+After finishing all the steps we would need to upload all of it github by using the commands git add, git commit, and git push. After uploading, deploy it in heroku using the method in Lab 0
 
 
 # WEEKLY ASSIGNMENT 3
@@ -37,6 +37,23 @@ Nicolas Ananda - 2106720973
 
 ## Explain the difference between JSON, XML, and HTML!
 
-The main difference between HTML, XML, and JSON can mainly be seen from 3 things, the structure, the content and the formatting. For JSON(JavaScript Object Notation) it is based from the JavaScript language, its 
+The main difference between HTML, XML, and JSON can mainly be seen from 3 things, the structure, the content and the formatting. 
+
+For JSON (JavaScript Object Notation) it is based from the JavaScript language and it utilizes similar code used for JavaScript Object, therefore making it easier to convert it to objects. Although JSON is based from JavaScript but it's format is text only making JSON to be able to be coded in any language.
+
+HTML (HyperText Markup Language) is a language built for websites. It's content are structured making it being displayed neatly. It is usually written with tags that are able to present the amount of information displayed. 
+
+XML (eXtensible Markup Language), it is quite similar with HTML which uses tags to display information but the diffrence is XML is designed to transport data where as HTML is used to display it
+
+## Explain why we need the data delivery when implementing on a platform!
+
+Data delivery is necessary because how a client and server communicate with one another is primarily through data delivery. Data is returned by the server in response to a client request. For instance, the server will return an HTML file if the client (browser) requests an HTML page. In response to a request for raw data from the client (browser), the server will provide an XML or JSON file.
+
+## Explain how you completed the tasks in this assignment
+
+First, I created a new app called `mywatchlist` , then I added the URL path of `mywatchlist` in the `project_django/settings.py` and add `path('mywatchlist/', include('mywatchlist.urls')` in `project_django/urls.py` , then I created the models in `mywatchlist/models.py` after that I created 10 data entries in `mywatchlist/fixtures/initial_mywatchlist_data.json`, then I implement some codes in `mywatchlist/views.py` to show the data. Lastly, I pull,add , commit and push it to GitHub
+
+## Postman API
+
 
 
