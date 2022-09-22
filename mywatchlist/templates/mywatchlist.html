@@ -32,8 +32,8 @@
     <tr>
         <tbody>
             <th>
-              {% if item.watched %}<p class="watched">✔️</p>
-              {% else %}<p class="not">❌</p>{% endif %}
+              {% if item.watched %}<p class="watched">YES</p>
+              {% else %}<p class="not">NO</p>{% endif %}
               
             </th>
             <th>{{item.title}}</th>
@@ -44,9 +44,12 @@
     </tr>
     {% endfor %}
   </table>
-  <h5>
-    
-  </h5>
+
  </body>
+  {% if watched > unwatched %}
+  <p>Congratulations, you have watched a lot of movies!</p>
+  {% else %}
+  <p>Woah, you need to watch more movies!</p>
+  {% endif %}
 
  {% endblock content %}
