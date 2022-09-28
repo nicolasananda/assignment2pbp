@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Hi, {{ username }} </h1>
+<button><a href="{% url 'todolist:create_task' %}">Create Task</a></button>
+
+<table>
+    <tr>
+        <th>Status</th>
+        <th>Task</th>
+        <th>Description</th>
+        <th>Check</th>
+        <th>Delete Task</th>
+    </tr>
+    {% for task in todolist %}
+    <tr>
+        <td>
+            <input
+            type="checkbox"
+            name="status"
+            id="status"
+            {% if task.is_finished %} checked {% endif %}
+            onchange="location.href='{% url 'todolist:update_finished' task.id %}'"
+            />
+        </td>
+        <td>{{task.title}}</td>
+        <td>{{task.description}}</td>
+        <td>{{task.date}}</td>
+        <td style="display: flex; justify-content: center">
+            <button><a href="{% url 'todolist:delete_task' task.id %}">Delete Task</a></button>
+        </td>
+    </tr>
+    {% endfor %}
+    {% comment %} Add the data below this line {% endcomment %}
+</table><button><a href="{% url 'todolist:logout' %}">Logout</a></button>
+
+{% endblock content %}
