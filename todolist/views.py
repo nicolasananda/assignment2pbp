@@ -78,14 +78,12 @@ def create_task(request):
     return render(request, "create_task.html")
 
 
-@login_required(login_url="/todolist/login/")
 def delete_task(request, id):
     task = Task.objects.get(user=request.user, id=id)
     task.delete()
     return HttpResponseRedirect(reverse("todolist:show_todolist"))
 
 
-@login_required(login_url="/todolist/login/")
 def update_finished(request, id):
     task = Task.objects.get(user=request.user, id=id)
     task.is_finished = not task.is_finished
