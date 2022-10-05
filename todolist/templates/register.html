@@ -5,19 +5,27 @@
 {% endblock meta %}
 
 {% block content %}
+<style>
+    table, tr, td{
+    border:1.5px solid black;
+    border-collapse:collapse;
+    text-align:left;
+    }
+    body{
+        margin:3px;
+}
+</style>
 
-<div class = "login">
-    <h1>Registration Form</h1>
+<div class = "container-md">
+    <h1 style="color:blueviolet">Registration Form</h1>
 
         <form method="POST" >
             {% csrf_token %}
             <table>
                 {{ form.as_table }}
-                <tr>
-                    <td></td>
-                    <td><input type="submit" name="submit" value="Register"/></td>
-                </tr>
+                <tr></tr>
             </table>
+            <button class="btn btn-success mx-auto my-3" type="submit" >Daftar</button>
         </form>
 
     {% if messages %}

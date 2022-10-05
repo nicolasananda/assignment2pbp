@@ -6,26 +6,54 @@
 
 {% block content %}
 
-<div class = "login">
+<style>
+    body{
+        background-image: url("");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-color: aliceblue;    
+    }
+    div{
+        margin-right: 100px;
+        margin-left: 100px;
+        border-style: solid;
+        text-align: left;
+    }
+    h1 {
+  text-align: center;
+  color: purple;
+} 
+tr.user{
+    text-align: center;
+    color: blue
+}
+p{
+  text-align: center;
+  color: black;
+}  
+</style>
+<body>
+
+<div>
 
     <h1>Login</h1>
 
     <form method="POST" action="">
         {% csrf_token %}
-        <table>
-            <tr>
+        <table align="center">
+            <tr class="user">
                 <td>Username: </td>
                 <td><input type="text" name="username" placeholder="Username"></td>
             </tr>
 
-            <tr>
+            <tr class="user">
                 <td>Password: </td>
                 <td><input type="password" name="password" placeholder="Password"></td>
             </tr>
 
             <tr>
                 <td></td>
-                <td><input class="btn login_btn" type="submit" value="Login"></td>
+                <td><input class="btn btn-success" type="submit" value="Login"></td>
             </tr>
         </table>
     </form>
@@ -38,8 +66,9 @@
         </ul>
     {% endif %}
 
-    Don't have an account? <a href="{% url 'todolist:register' %}">Create Account</a>
+    <p>Don't have an account? <a href="{% url 'todolist:register' %}">Create Account</a></p>
 
 </div>
+</body>
 
 {% endblock content %}
