@@ -109,7 +109,7 @@ def add_task(request):
             description=description,
             date=datetime.datetime.today(),
         )
-        return JsonResponse(
+        return JsonResponse( 
             {
                 "pk": task.id,
                 "fields": {

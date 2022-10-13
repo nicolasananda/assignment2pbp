@@ -11,3 +11,16 @@ The execution of a program is controlled by new user events (mouse clicks, key i
 ## Implementation
 
 1. Add <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> to html header.
+2. Add <script> to the html
+3. Add "add_task" and "show_json" on views.py
+4. Write ajax JQuery syntax inside your script, like $.ajax() to POST, DELETE, etc.
+
+## Process
+1. Add <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> to html header.
+2. Add <script> to the html
+3. Add "add_task" and "show_json" on views.py
+4. Write ajax JQuery syntax inside your script, like $.ajax() to POST, DELETE, etc. 
+5. Add GET
+6. Add POST
+7. Create the modals using bootstrap
+8. Add, Commit, and Push to Github

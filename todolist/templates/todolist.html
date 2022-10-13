@@ -1,7 +1,81 @@
 {% extends 'base.html' %}
 
 {% block content %}
-
+<script>
+    $(document).ready(function() {
+    function card(task) {
+        return `
+    <div class="card text-center mx-auto my-3 mb-3" style="border-radius: 10px; width: 15rem; background-color: bisque;">
+        <div class="card-body">
+        <h6 class="card-subtitle mb-2" style="margin-top:5px;">${task.fields.title} - ${task.fields.date}</h6>
+        <p class="card-text">${task.fields.description}</p>
+        <div class="custom-control custom-checkbox">
+            
+            <input type="checkbox" class="custom-control-input" onclick="location.href='update-finished/${task.pk}'" ${task.fields.is_finished ? "checked" : ""}>
+            <label class="custom-control-label" for="#">Task Status</label>
+        </div>
+        <button class="btn btn-outline-danger btn-sm" style="margin-top: 3px ; margin-bottom: -5px; ;"><a href="delete-task/${task.pk}">Delete Task</a></button>
+        </div>
+  </div>
+  `};
+  function forloop() {
+        $.get("{% url 'todolist:show_json' %}", function(data) {
+            $.each(data, function(i, value) {
+                $("#refer").append(card(value));
+            });
+        });
+    };
+    $("#submitbutton").click(e => {
+      e.preventDefault();
+      const csrftoken = document.querySelector(
+        "[name=csrfmiddlewaretoken]"
+      ).value;
+      $.ajax({
+          type: "POST",
+          url: "{% url 'todolist:add_task' %}",
+          headers: { "X-CSRFToken": csrftoken },
+          mode: "same-origin",
+          data: {
+            title: $("#titleinput").val(),
+            description: $("#descinput").val(),
+          },
+          success: response => {
+            $("#addtask").trigger("reset");
+            $("#refer").prepend(card(response));
+          },
+          error: error => {
+            console.log(error);
+          },
+        });
+    });
+    forloop();
+})
+</script>
+<div class="modal fade" id="modall" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+      <div class="modal-body">
+        <form method="post" id="addtask">
+            {% csrf_token %}
+            <div class="col text-center">
+            <div class="form-floating mb-3 w-10">
+                <input  type="text" class="form-control" name="title" id="titleinput" placeholder="Task Name">
+                <label for="floatingInput">Title</label></div>
+                <div class="form-floating">
+                <input type="text" class="form-control" name="description" id="descinput" placeholder="Task Name" required>
+                <label for="floatingInput">Description</label>
+                <button class="btn btn-success my-3" type="submit" id="submitbutton" data-bs-dismiss="modal">Create Task</button>
+            </div>
+            </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
 <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: gray;">
     <div class="container-fluid">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -11,28 +85,16 @@
                 </a>
             </li>
             <li class="nav-item">
-                <button class="btn btn-light btn-outline-warning btn-sm"><a href="{% url 'todolist:create_task' %}">Create Task</a></button>
+                <button class="btn btn-light btn-outline-warning btn-sm" data-bs-toggle="modal" data-bs-target="#modall">Create Task</button>
                 <button class="btn btn-light btn-outline-danger btn-sm" type="button"><a href="{% url 'todolist:logout' %}">Logout</a></button>
             </li>
         </ul>
     </div>
 </nav>
 
-<div class="row row-cols-1 row-cols-md-5 g-4 my-auto">
+<div id="refer" class="row row-cols-1 row-cols-md-5 g-4 my-auto">
 {% for task in todolist %}
-<div class="card text-center mx-auto my-3 mb-3" style="border-radius: 10px; width: 15rem; background-color: bisque;">
-    <div class="card-body">
-      <h5 class="card-title">{{task.user}}</h5>
-      <h6 class="card-subtitle mb-2" style="margin-top:5px;">{{task.title}} - {{task.date}}</h6>
-      <p class="card-text">{{task.description}}</p>
-      <div class="custom-control custom-checkbox">
-        
-        <input type="checkbox" class="custom-control-input" onclick="location.href=`{% url 'todolist:update_finished' task.id %}`" {% if task.is_finished %} checked {% endif %}>
-        <label class="custom-control-label" for="#">Task Status</label>
-    </div>
-    <button class="btn btn-outline-danger btn-sm" style="margin-top: 3px ; margin-bottom: -5px; ;"><a href="{% url 'todolist:delete_task' task.id %}">Delete Task</a></button>
-    </div>
-  </div>
+
 
 {% endfor %}
 </div>
